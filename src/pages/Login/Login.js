@@ -1,11 +1,10 @@
 
-import React from 'react';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Form, Input } from 'antd';
-import { Formik, useFormik, withFormik } from 'formik';
-import * as Yup from 'yup';
+import { Button, Input } from 'antd';
+import { withFormik } from 'formik';
+import React from 'react';
 import { connect } from 'react-redux';
-import { SIGNIN_API } from '../../redux/contants/CyberBug';
+import * as Yup from 'yup';
 import { action_signIn } from '../../redux/actions/CyberBugSagaAction';
 function Login(props) {
     const {
@@ -19,7 +18,7 @@ function Login(props) {
                 <div className='d-flex mt-3'>
                     <Input style={{ width: "100%" }} onChange={handleChange} name='email' size='large' placeholder='email' prefix={< UserOutlined />} />
                 </div>
-                <p>{errors.email}</p>
+                <p style={{ color: "red", textAlign: "left" }}>{errors.email}</p>
                 <div className='d-flex mt-3'>
                     <Input style={{ width: "100%" }} onChange={handleChange} type='password' name='password' size='large' placeholder='paswword' prefix={< LockOutlined />} />
                 </div>
