@@ -10,8 +10,8 @@ function* SignInSaga(action) {
         // call api
         const { data } = yield call(() => userService.signIn(action.userLogin));
 
-        localStorage.setItem(TOKEN, data.content.accessToken);
-        localStorage.setItem(USER_LOGIN, JSON.stringify(data.content));
+        localStorage.setItem("TOKEN", data.content.accessToken);
+        localStorage.setItem("USER_LOGIN", JSON.stringify(data.content));
         // action.userLogin.history.push('/register');
         history.push('/home')
         yield put({
