@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event';
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { GET_CATEGORY, GET_USER, LOGIN_ACTION, SIGNIN_API } from "../redux/contants/CyberBug";
 import { projectService } from '../services/ProjectService';
