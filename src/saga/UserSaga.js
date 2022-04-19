@@ -2,7 +2,6 @@ import { call, put, takeLatest } from 'redux-saga/effects';
 import { GET_CATEGORY, GET_USER, LOGIN_ACTION, SIGNIN_API } from "../redux/contants/CyberBug";
 import { projectService } from '../services/ProjectService';
 import { userService } from '../services/UserService';
-import { TOKEN, USER_LOGIN } from "../util/constants/settingSystem";
 import { history } from "../util/history";
 
 // interator function
