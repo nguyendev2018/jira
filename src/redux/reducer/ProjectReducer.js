@@ -15,6 +15,7 @@ export const ProjectReducer = (state = stateDefault, action) => {
     switch (action.type) {
         case ALL: {
             state.arrAll = action.dataAll;
+            console.log(action.dataAll);
             return { ...state }
         }
         case EDIT_PROJECT: {

@@ -9,9 +9,8 @@ import { connect, withFormik } from 'formik';
 
 export default function All(props) {
     const dataAll = useSelector(state => state.ProjectReducer.arrAll);
-
     const userSearch = useSelector(state => state.UserReducer.userSearch);
-    const data = dataAll;
+
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch({
@@ -191,7 +190,7 @@ export default function All(props) {
                 <Button onClick={clearFilters}>Clear filters</Button>
                 <Button onClick={clearAll}>Clear filters and sorters</Button>
             </Space>
-            <Table columns={columns} dataSource={data} onChange={handleChange} />
+            <Table columns={columns} dataSource={dataAll} onChange={handleChange} />
         </div>
     )
 
